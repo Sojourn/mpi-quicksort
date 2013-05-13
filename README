@@ -1,0 +1,32 @@
+#
+#       File:           README
+#       Description:    For understanding how to compile and run the program
+#       Authors:        Scott Connell && Joel Rausch
+#       Date Created:   March 8, 2013 at 18:40
+#
+#       This file written for Programming Assignment 2 for CprE 426.
+#       Iowa State University
+#
+
+How to make (compile) our program:
+
+	++======================++
+	||	type "make"	||
+	++======================++
+
+How to run the our program:
+
+	++==============================++
+	||	type "make run"		||
+	++==============================++
+
+	Alternatively, you can type
+		" mpirun -np 16 qsort input.txt"	(for 16 processors, with input file input.txt)
+
+Feel free to go into to Makefile and edit any of the settings at the top.
+The ones you will most likely be interested in are:
+	$(INPUTFILE):	The name of the input file (our default is input.txt)
+	$(NP):		The number of processors you want to run it on. (Our default is 16 because that is optimal)
+
+At the bottom of the makefile, you see an extra target (gen) and quick instructions on how to use it.
+This is simply for generating an input file.  Feel free to use it, instructions are in the Makefile.
